@@ -26,12 +26,15 @@ namespace LudumDare40 {
 		[Header("Animations")]
 		[SerializeField]
 		string invincibilityField = "IsInvincible";
+		[SerializeField]
+		RectTransform healthBar;
 
 		Rigidbody2D body;
 		Animator animator;
 		float damageStartTime = -1f;
 		float knockbackStartTime = -1f;
 		int currentHealth = 0;
+		Vector2 healthBarMax = new Vector2 (1f, 1f);
 
 		public bool IsInvincible {
 			get {
@@ -54,6 +57,9 @@ namespace LudumDare40 {
 				if (currentHealth == 0) {
 					Singleton.Get<SceneTransitionManager> ().ReloadCurrentScene ();
 				}
+				healthBarMax.x = currentHealth;
+				healthBarMax.x /= maxHealth;
+				healthBar.anchorMax = healthBarMax;
 			}
 		}
 
