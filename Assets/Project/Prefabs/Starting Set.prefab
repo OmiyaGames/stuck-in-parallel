@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 95334692023615196}
   - component: {fileID: 50754213628152956}
   - component: {fileID: 114797962325490790}
+  - component: {fileID: 114469219104792760}
   - component: {fileID: 81196758619104342}
   m_Layer: 0
   m_Name: Player
@@ -1251,6 +1252,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 400
+--- !u!114 &114469219104792760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197573990503662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b96fd349b4b824e2496348d7e994f3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 4
+  damageInvincibilitySeconds: 1.5
+  spikesTag: Spikes
+  controls: {fileID: 114465666884962938}
+  knockbackStrength: 15
+  knockbackDurationSeconds: 0.4
+  invincibilityField: IsInvincible
 --- !u!114 &114531380599491594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1278,26 +1297,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   greenLayer:
+    forColor: 1
     renderCamera: {fileID: 20852879865646078}
     maskCamera: {fileID: 20464045769968926}
     renderImage: {fileID: 114630047064190758}
     maskImage: {fileID: 114647442495372502}
-    renderTexture: {fileID: 0}
-    maskTexture: {fileID: 0}
   purpleLayer:
+    forColor: 2
     renderCamera: {fileID: 20007676708383252}
     maskCamera: {fileID: 20406869855538122}
     renderImage: {fileID: 114634424326927054}
     maskImage: {fileID: 114107368004699316}
-    renderTexture: {fileID: 0}
-    maskTexture: {fileID: 0}
   orangeLayer:
+    forColor: 3
     renderCamera: {fileID: 20436139512274554}
     maskCamera: {fileID: 20538429516177230}
     renderImage: {fileID: 114021721546954906}
     maskImage: {fileID: 114812831525933868}
-    renderTexture: {fileID: 0}
-    maskTexture: {fileID: 0}
 --- !u!114 &114630047064190758
 MonoBehaviour:
   m_ObjectHideFlags: 1

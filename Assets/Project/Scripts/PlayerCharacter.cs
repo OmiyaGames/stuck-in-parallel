@@ -28,6 +28,7 @@ namespace LudumDare40 {
 		Rigidbody2D body = null;
 		Animator animator = null;
 		Direction facing = Direction.Down;
+		bool isInControl = true;
 
 		public Rigidbody2D Body {
 			get {
@@ -41,6 +42,15 @@ namespace LudumDare40 {
 			}
 		}
 
+		public bool IsInControl {
+			get {
+				return isInControl;
+			}
+			set {
+				isInControl = value;
+			}
+		}
+
 		void Start() {
 			body = GetComponent<Rigidbody2D> ();
 			animator = GetComponent<Animator> ();
@@ -48,13 +58,17 @@ namespace LudumDare40 {
 
 		// Update is called once per frame
 		void Update () {
-			// Get the controls
-			controls.x = CrossPlatformInputManager.GetAxis("Horizontal");
-			controls.y = CrossPlatformInputManager.GetAxis("Vertical");
+			controls.x = 0;
+			controls.y = 0;
+			if (IsInControl == true) {
+				// Get the controls
+				controls.x = CrossPlatformInputManager.GetAxis ("Horizontal");
+				controls.y = CrossPlatformInputManager.GetAxis ("Vertical");
 
-			// Normalize directions (diagonals are the same speed as normal controls)
-			if ((Mathf.Approximately (controls.x, 0) == false) || (Mathf.Approximately (controls.y, 0) == false)) {
-				controls.Normalize ();
+				// Normalize directions (diagonals are the same speed as normal controls)
+				if ((Mathf.Approximately (controls.x, 0) == false) || (Mathf.Approximately (controls.y, 0) == false)) {
+					controls.Normalize ();
+				}
 			}
 
 			// Update animation
