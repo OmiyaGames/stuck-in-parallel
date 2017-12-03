@@ -19,6 +19,7 @@ namespace LudumDare40 {
 		// Use this for initialization
 		void Start () {
 			body = GetComponent<Rigidbody2D> ();
+			spinObject.gameObject.SetActive (true);
 		}
 		
 		// Update is called once per frame

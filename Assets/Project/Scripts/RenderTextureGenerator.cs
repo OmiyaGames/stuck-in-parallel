@@ -24,30 +24,30 @@ namespace LudumDare40 {
 
 		// Use this for initialization
 		void Awake () {
-			CreateSet (ref greenLayer);
-			CreateSet (ref purpleLayer);
-			CreateSet (ref orangeLayer);
+			CreateSet (ref greenLayer, "Green");
+			CreateSet (ref purpleLayer, "Purple");
+			CreateSet (ref orangeLayer, "Orange");
 		}
 		
 		// Update is called once per frame
 		void Update () {
-			UpdateSet (ref greenLayer);
-			UpdateSet (ref purpleLayer);
-			UpdateSet (ref orangeLayer);
+			UpdateSet (ref greenLayer, "Green");
+			UpdateSet (ref purpleLayer, "Purple");
+			UpdateSet (ref orangeLayer, "Orange");
 		}
 
-		static void UpdateSet(ref Set textureSet) {
+		static void UpdateSet(ref Set textureSet, string name) {
 			if (textureSet.renderTexture == null) {
-				CreateSet (ref textureSet);
+				CreateSet (ref textureSet, name);
 			} else if ((textureSet.renderTexture.width != Screen.width) || (textureSet.renderTexture.width != Screen.height)) {
 				textureSet.renderTexture.Release ();
 				textureSet.maskTexture.Release ();
-				CreateSet (ref textureSet);
+				CreateSet (ref textureSet, name);
 			}
 		}
-		static void CreateSet(ref Set textureSet) {
-			textureSet.renderTexture = new RenderTexture (Screen.width, Screen.height, 16);
-			textureSet.maskTexture = new RenderTexture (Screen.width, Screen.height, 16);
+		static void CreateSet(ref Set textureSet, string name) {
+			textureSet.renderTexture = NewTexture("Render, " + name);
+			textureSet.maskTexture = NewTexture("Mask, " + name);
 
 			textureSet.renderCamera.gameObject.SetActive (true);
 			textureSet.renderCamera.targetTexture = textureSet.renderTexture;
@@ -60,6 +60,11 @@ namespace LudumDare40 {
 
 			textureSet.maskImage.gameObject.SetActive (true);
 			textureSet.maskImage.texture = textureSet.maskTexture;
+		}
+		static RenderTexture NewTexture(string name) {
+			RenderTexture texture = new RenderTexture (Screen.width, Screen.height, 0, RenderTextureFormat.Default);
+			texture.name = name;
+			return texture;
 		}
 	}
 }
