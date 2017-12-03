@@ -657,7 +657,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493792289766178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.311, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4074021732380318}
@@ -1093,7 +1093,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.75, y: 0.375}
+  m_Size: {x: 0.75, y: 0.55}
   m_EdgeRadius: 0
 --- !u!81 &81196758619104342
 AudioListener:
@@ -1439,10 +1439,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdingLantern: {fileID: 0}
-  dropLeft: {fileID: 0}
-  dropRight: {fileID: 0}
-  dropTop: {fileID: 0}
-  dropBottom: {fileID: 0}
+  player: {fileID: 114465666884962938}
+  dropLeft: {fileID: 4556790956379188}
+  dropRight: {fileID: 4817170600463246}
+  dropTop: {fileID: 4269930254965528}
+  dropBottom: {fileID: 4804958690782294}
 --- !u!114 &114812831525933868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1598,7 +1599,7 @@ SpriteRenderer:
   m_SortingLayerID: -1703414615
   m_SortingLayer: 1
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 5fa3e11359bf548839d5adb85abe6a89, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa7aaceecdc644262aef0641c587d608, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
