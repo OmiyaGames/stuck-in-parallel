@@ -56,6 +56,16 @@ namespace LudumDare40 {
 			}
 		}
 
+		void OnDrawGizmos() {
+			if (player != null) {
+				Vector3 size = Vector3.zero;
+				size.x = margin.x * 2;
+				size.y = margin.y * 2;
+				Gizmos.color = Color.white;
+				Gizmos.DrawWireCube (player.transform.position, size);
+			}
+		}
+
 		void FixedUpdate() {
 			TrackPlayer ();
 		}
