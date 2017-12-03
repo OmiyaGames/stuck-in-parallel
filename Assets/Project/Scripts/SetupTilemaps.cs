@@ -29,10 +29,6 @@ namespace LudumDare40 {
 				TileBase originalTile = maps.originalWithCollision.GetTile<TileBase> (pos);
 				if (originalTile != null) {
 					if (originalTile == tiles.withCollision) {
-						// Leave the tile on the original map
-						// Add a no-collision tile on the opposite map
-						maps.oppositeNoCollision.SetTile(pos, tiles.noCollision);
-					} else if (originalTile == tiles.noCollision) {
 						// Remove the tile on the original map
 						maps.originalWithCollision.SetTile(pos, null);
 
@@ -41,6 +37,12 @@ namespace LudumDare40 {
 
 						// Add a collision tile on the opposite map
 						maps.oppositeWithCollision.SetTile(pos, tiles.withCollision);
+					} else if (originalTile == tiles.noCollision) {
+						// Replace the tile on the original map with collision
+						maps.originalWithCollision.SetTile(pos, tiles.withCollision);
+
+						// Add a no-collision tile on the opposite map
+						maps.oppositeNoCollision.SetTile(pos, tiles.noCollision);
 					}
 				}
 			}
