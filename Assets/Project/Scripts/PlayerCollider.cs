@@ -8,7 +8,8 @@ namespace LudumDare40 {
 		static PlayerCollider instance;
 
 		[SerializeField]
-		Transform camera;
+		[UnityEngine.Serialization.FormerlySerializedAs("camera")]
+		Transform cameraPosition;
 		[SerializeField]
 		Rigidbody2D pauseSimulation;
 
@@ -75,8 +76,8 @@ namespace LudumDare40 {
 		void UpdateLayers (GameObject updateObject, LayerMask layers, Universe defaultUniverse, ref Universe lastUniverse)
 		{
 			// Setup the ray
-			Vector3 diff = updateObject.transform.position - camera.position;
-			ray.origin = camera.position;
+			Vector3 diff = updateObject.transform.position - cameraPosition.position;
+			ray.origin = cameraPosition.position;
 			ray.direction = diff;
 
 			// Raycast for any 3D colliders
@@ -96,7 +97,7 @@ namespace LudumDare40 {
 			// Check if this is different from the last universe
 			if (lastUniverse != currentUniverse) {
 				// Update the player collider's layer
-				gameObject.layer = allPlayerLayers [currentUniverse];
+				updateObject.layer = allPlayerLayers [currentUniverse];
 
 				// Update last universe
 				lastUniverse = currentUniverse;
