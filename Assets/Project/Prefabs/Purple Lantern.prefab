@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4565038257512092}
   - component: {fileID: 50770357582709660}
-  - component: {fileID: 58130809659477620}
   - component: {fileID: 212129502283011162}
   - component: {fileID: 114205841779118942}
+  - component: {fileID: 114162926211369328}
   m_Layer: 14
   m_Name: Purple Lantern
   m_TagString: Purple Lantern
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 4585050824992218}
   - component: {fileID: 33832942144322580}
   - component: {fileID: 23284988606542018}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Wireframe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,6 +76,22 @@ GameObject:
   - component: {fileID: 64142572163943324}
   m_Layer: 11
   m_Name: Cone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1844050145224468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4744085124645280}
+  - component: {fileID: 58656729757011372}
+  m_Layer: 20
+  m_Name: Collider 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +121,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4621645311537360}
+  - {fileID: 4744085124645280}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,6 +152,19 @@ Transform:
   - {fileID: 4585050824992218}
   m_Father: {fileID: 4565038257512092}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4744085124645280
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1844050145224468}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4565038257512092}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23284988606542018
 MeshRenderer:
@@ -253,12 +283,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!58 &58130809659477620
+--- !u!58 &58656729757011372
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1364646504670820}
+  m_GameObject: {fileID: 1844050145224468}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -282,6 +312,21 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: 75db9ee9fb68546feab99bb8d8982121, type: 3}
+--- !u!114 &114162926211369328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1364646504670820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b562cd54189e40a88d60709cbe21ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider3d: {fileID: 64142572163943324}
+  collider2d: {fileID: 58656729757011372}
+  universe: 2
+  lastUnivese: 0
 --- !u!114 &114205841779118942
 MonoBehaviour:
   m_ObjectHideFlags: 1
