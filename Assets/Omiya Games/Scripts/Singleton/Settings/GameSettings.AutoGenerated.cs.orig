@@ -1,0 +1,205 @@
+﻿namespace OmiyaGames.Settings
+{
+    /// <summary>
+    /// This code is auto-generated. All changes will be overwritten!
+    /// </summary>
+    public partial class GameSettings : ISingletonScript
+    {
+        #region Private Arrays
+        /// <summary>
+        /// Array of all the <see cref="ISettingsVersion"/> detected in this project.
+        /// Used as reference in the properties.
+        /// </summary>
+        private readonly ISettingsVersion[] AllSettingsVersions = new ISettingsVersion[]
+        {
+            new OmiyaGames.Settings.AddAudioSettings(),
+            new OmiyaGames.Settings.AddLocalAnalytics(),
+            new OmiyaGames.Settings.AddLanguageSettings(),
+        };
+
+        /// <summary>
+        /// Array cache used by <see cref="AllSingleSettings"/>.
+        /// </summary>
+        private IStoredSetting[] allSingleSettings = null;
+
+        /// <summary>
+        /// Array of <see cref="IStoredSetting"/> that has a Property in this class.
+        /// Used for collective saving and retrieval of settings.
+        /// </summary>
+        private IStoredSetting[] AllSingleSettings
+        {
+            get
+            {
+                if(allSingleSettings == null)
+                {
+                    allSingleSettings = new IStoredSetting[]
+                    {
+                        #region ISingleSettings from version 0
+                        AllSettingsVersions[0].GetSetting("Music Volume"),
+                        AllSettingsVersions[0].GetSetting("Sound Volume"),
+                        AllSettingsVersions[0].GetSetting("Music Muted"),
+                        AllSettingsVersions[0].GetSetting("Sound Muted"),
+                        #endregion
+
+                        #region ISingleSettings from version 1
+                        AllSettingsVersions[1].GetSetting("Number of Unlocked Levels"),
+                        AllSettingsVersions[1].GetSetting("Number of Times App Open"),
+                        AllSettingsVersions[1].GetSetting("Total Play Time"),
+                        #endregion
+
+                        #region ISingleSettings from version 2
+                        AllSettingsVersions[2].GetSetting("Language"),
+                        #endregion
+                    };
+                }
+                return allSingleSettings;
+            }
+        }
+        #endregion
+
+        /// <summary>
+        /// The latest version number stored in settings.
+        /// This is the size of <see cref="AllSettingsVersions"/>
+        /// </summary>
+        public int AppVersion
+        {
+            get
+            {
+                return AllSettingsVersions.Length;
+            }
+        }
+
+        #region Properties from AppVersion 0
+        /// <summary>
+        /// The stored music volume, between 0 and 1.
+        /// </summary>
+        internal float MusicVolume
+        {
+            get
+            {
+                return AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredFloatGenerator>("Music Volume").Value;
+            }
+            set
+            {
+                AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredFloatGenerator>("Music Volume").SetValue(value, Settings, AppVersion);
+            }
+        }
+
+        /// <summary>
+        /// The stored sound volume, between 0 and 1.
+        /// </summary>
+        internal float SoundVolume
+        {
+            get
+            {
+                return AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredFloatGenerator>("Sound Volume").Value;
+            }
+            set
+            {
+                AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredFloatGenerator>("Sound Volume").SetValue(value, Settings, AppVersion);
+            }
+        }
+
+        /// <summary>
+        /// Whether the music is muted or not.
+        /// </summary>
+        internal bool IsMusicMuted
+        {
+            get
+            {
+                return AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredBoolGenerator>("Music Muted").Value;
+            }
+            set
+            {
+                AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredBoolGenerator>("Music Muted").SetValue(value, Settings, AppVersion);
+            }
+        }
+
+        /// <summary>
+        /// Whether the sound is muted or not.
+        /// </summary>
+        internal bool IsSoundMuted
+        {
+            get
+            {
+                return AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredBoolGenerator>("Sound Muted").Value;
+            }
+            set
+            {
+                AllSettingsVersions[0].GetGenerator<OmiyaGames.Settings.StoredBoolGenerator>("Sound Muted").SetValue(value, Settings, AppVersion);
+            }
+        }
+        #endregion
+
+        #region Properties from AppVersion 1
+        /// <summary>
+        /// The number of levels unlocked.
+        /// </summary>
+        public int NumLevelsUnlocked
+        {
+            get
+            {
+                return AllSettingsVersions[1].GetGenerator<OmiyaGames.Settings.StoredIntGenerator>("Number of Unlocked Levels").Value;
+            }
+            set
+            {
+                AllSettingsVersions[1].GetGenerator<OmiyaGames.Settings.StoredIntGenerator>("Number of Unlocked Levels").SetValue(value, Settings, AppVersion);
+            }
+        }
+
+        /// <summary>
+        /// Default number of levels unlocked.
+        /// </summary>
+        public int DefaultNumLevelsUnlocked
+        {
+            get
+            {
+                return AddLocalAnalytics.DefaultNumLevelsUnlocked;
+            }
+        }
+
+        /// <summary>
+        /// The number of times the player opened this game.
+        /// </summary>
+        public int NumberOfTimesAppOpened
+        {
+            get
+            {
+                return AllSettingsVersions[1].GetGenerator<OmiyaGames.Settings.StoredIntGenerator>("Number of Times App Open").Value;
+            }
+            set
+            {
+                AllSettingsVersions[1].GetGenerator<OmiyaGames.Settings.StoredIntGenerator>("Number of Times App Open").SetValue(value, Settings, AppVersion);
+            }
+        }
+
+        /// <summary>
+        /// How long the player played this game.
+        /// </summary>
+        public System.TimeSpan TotalPlayTime
+        {
+            get
+            {
+                return AllSettingsVersions[1].GetGenerator<OmiyaGames.Settings.StoredPlayTimeGenerator>("Total Play Time").TotalPlayTime;
+            }
+        }
+        #endregion
+
+        #region Properties from AppVersion 2
+        /// <summary>
+        /// The user-chosen language
+        /// </summary>
+        public string Language
+        {
+            get
+            {
+                return AllSettingsVersions[2].GetGenerator<OmiyaGames.Settings.StoredStringGenerator>("Language").Value;
+            }
+            internal set
+            {
+                AllSettingsVersions[2].GetGenerator<OmiyaGames.Settings.StoredStringGenerator>("Language").SetValue(value, Settings, AppVersion);
+            }
+        }
+        #endregion
+    }
+}

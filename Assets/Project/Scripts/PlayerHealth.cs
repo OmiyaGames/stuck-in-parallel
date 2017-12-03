@@ -14,6 +14,8 @@ namespace LudumDare40 {
 		float damageInvincibilitySeconds = 1.5f;
 		[SerializeField]
 		string spikesTag = "spikes";
+		[SerializeField]
+		LevelExit exit;
 
 		[Header("Knockback")]
 		[SerializeField]
@@ -35,6 +37,7 @@ namespace LudumDare40 {
 		float knockbackStartTime = -1f;
 		int currentHealth = 0;
 		Vector2 healthBarMax = new Vector2 (1f, 1f);
+		bool isDead = false;
 
 		public bool IsInvincible {
 			get {
@@ -54,8 +57,8 @@ namespace LudumDare40 {
 			}
 			set {
 				currentHealth = Mathf.Clamp (value, 0, maxHealth);
-				if (currentHealth == 0) {
-					Singleton.Get<SceneTransitionManager> ().ReloadCurrentScene ();
+				if ((isDead == false) && (currentHealth == 0)) {
+					exit.RestartLevel();
 				}
 				healthBarMax.x = currentHealth;
 				healthBarMax.x /= maxHealth;
