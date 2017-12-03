@@ -5,14 +5,23 @@ using UnityEngine.UI;
 
 namespace LudumDare40 {
 	public class RenderTextureGenerator : MonoBehaviour {
+
+		static readonly Dictionary<Universe, Textures> CachedTextures = new Dictionary<Universe, Textures>();
+		static int LastScreenWidth = 0;
+		static int LastScreenHeight = 0;
+
 		[System.Serializable]
-		public struct Set {
+		public class Set {
+			public Universe forColor;
 			public Camera renderCamera;
 			public Camera maskCamera;
 			public RawImage renderImage;
 			public RawImage maskImage;
-			public RenderTexture renderTexture;
-			public RenderTexture maskTexture;
+		}
+
+		struct Textures {
+			public RenderTexture render;
+			public RenderTexture mask;
 		}
 
 		[SerializeField]
@@ -22,48 +31,75 @@ namespace LudumDare40 {
 		[SerializeField]
 		Set orangeLayer;
 
+		Set[] allSets = null;
+
 		// Use this for initialization
 		void Awake () {
-			CreateSet (ref greenLayer, "Green");
-			CreateSet (ref purpleLayer, "Purple");
-			CreateSet (ref orangeLayer, "Orange");
+			allSets = new Set[] { greenLayer, purpleLayer, orangeLayer };
+			if (CachedTextures.Count <= 0) {
+				PopulateCachedTextures (allSets);
+				LastScreenWidth = Screen.width;
+				LastScreenHeight = Screen.height;
+			} else if (IsWindowDimensionDifferent == true) {
+				LastScreenWidth = Screen.width;
+				LastScreenHeight = Screen.height;
+			}
+			foreach (Set layer in allSets) {
+				UpdateSet (layer);
+			}
 		}
 		
 		// Update is called once per frame
 		void Update () {
-			UpdateSet (ref greenLayer, "Green");
-			UpdateSet (ref purpleLayer, "Purple");
-			UpdateSet (ref orangeLayer, "Orange");
-		}
-
-		static void UpdateSet(ref Set textureSet, string name) {
-			if (textureSet.renderTexture == null) {
-				CreateSet (ref textureSet, name);
-			} else if ((textureSet.renderTexture.width != Screen.width) || (textureSet.renderTexture.width != Screen.height)) {
-				textureSet.renderTexture.Release ();
-				textureSet.maskTexture.Release ();
-				CreateSet (ref textureSet, name);
+			if (IsWindowDimensionDifferent == true) {
+				PopulateCachedTextures (allSets);
+				foreach (Set layer in allSets) {
+					UpdateSet (layer);
+				}
+				LastScreenWidth = Screen.width;
+				LastScreenHeight = Screen.height;
 			}
 		}
-		static void CreateSet(ref Set textureSet, string name) {
-			textureSet.renderTexture = NewTexture("Render, " + name);
-			textureSet.maskTexture = NewTexture("Mask, " + name);
-
+		static void PopulateCachedTextures(Set[] allSets) {
+			foreach (Set layer in allSets) {
+				if (CachedTextures.ContainsKey (layer.forColor) == true) {
+					CachedTextures [layer.forColor].render.Release ();
+					CachedTextures [layer.forColor].render.width = Screen.width;
+					CachedTextures [layer.forColor].render.height = Screen.height;
+					CachedTextures [layer.forColor].mask.Release ();
+					CachedTextures [layer.forColor].mask.width = Screen.width;
+					CachedTextures [layer.forColor].mask.height = Screen.height;
+				} else {
+					Textures textureSet = new Textures ();
+					textureSet.render = NewTexture ("Render, " + layer.forColor.ToString ());
+					textureSet.mask = NewTexture ("Render, " + layer.forColor.ToString ());
+					CachedTextures.Add (layer.forColor, textureSet);
+				}
+			}
+		}
+		static bool IsWindowDimensionDifferent {
+			get {
+				return (Screen.width != LastScreenWidth) || (Screen.height != LastScreenHeight);
+			}
+		}
+		static void UpdateSet(Set textureSet) {
 			textureSet.renderCamera.gameObject.SetActive (true);
-			textureSet.renderCamera.targetTexture = textureSet.renderTexture;
+			textureSet.renderCamera.targetTexture = CachedTextures[textureSet.forColor].render;
 
 			textureSet.maskCamera.gameObject.SetActive (true);
-			textureSet.maskCamera.targetTexture = textureSet.maskTexture;
+			textureSet.maskCamera.targetTexture = CachedTextures[textureSet.forColor].mask;
 
 			textureSet.renderImage.gameObject.SetActive (true);
-			textureSet.renderImage.texture = textureSet.renderTexture;
+			textureSet.renderImage.texture = CachedTextures[textureSet.forColor].render;
 
 			textureSet.maskImage.gameObject.SetActive (true);
-			textureSet.maskImage.texture = textureSet.maskTexture;
+			textureSet.maskImage.texture = CachedTextures[textureSet.forColor].mask;
 		}
 		static RenderTexture NewTexture(string name) {
 			RenderTexture texture = new RenderTexture (Screen.width, Screen.height, 0, RenderTextureFormat.Default);
 			texture.name = name;
+			texture.useMipMap = false;
+			texture.autoGenerateMips = false;
 			return texture;
 		}
 	}
