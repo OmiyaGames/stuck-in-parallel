@@ -20,13 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4457237263545504}
   - component: {fileID: 54861041715345984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cubeExport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1413360381652014
 GameObject:
   m_ObjectHideFlags: 1
@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 58380929635673750}
   - component: {fileID: 212978956627224296}
   - component: {fileID: 114255049180118976}
-  m_Layer: 15
+  m_Layer: 14
   m_Name: Green Lantern
-  m_TagString: Untagged
+  m_TagString: Green Lantern
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1517200304062968}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16, y: 2.91, z: 0}
+  m_LocalPosition: {x: 3.4, y: 3.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4457237263545504}

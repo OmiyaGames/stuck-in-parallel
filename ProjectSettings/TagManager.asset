@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Green Lantern
+  - Purple Lantern
+  - Orange Lantern
   layers:
   - Default
   - TransparentFX
@@ -20,10 +23,10 @@ TagManager:
   - Orange
   - Mask Orange
   - Spikes
-  - Lanterns
   - Not Green
   - Not Purple
   - Not Orange
+  - Player
   - 
   - 
   - 
