@@ -812,7 +812,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157343566083714
 TilemapRenderer:
@@ -851,7 +851,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157343592178956
 TilemapRenderer:
@@ -890,7 +890,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157343653425806
 TilemapRenderer:
@@ -929,7 +929,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157343797818916
 TilemapRenderer:
@@ -968,7 +968,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157344471033850
 TilemapRenderer:
@@ -1007,7 +1007,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157344718930134
 TilemapRenderer:
@@ -1046,7 +1046,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157345021600672
 TilemapRenderer:
@@ -1085,7 +1085,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157345114814180
 TilemapRenderer:
@@ -1124,7 +1124,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157345518352838
 TilemapRenderer:
@@ -1163,7 +1163,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157345556634620
 TilemapRenderer:
@@ -1202,7 +1202,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157346050290050
 TilemapRenderer:
@@ -1241,7 +1241,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157346224814246
 TilemapRenderer:
@@ -1280,7 +1280,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157346308926286
 TilemapRenderer:
@@ -1319,7 +1319,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!483693784 &3664157346318115700
 TilemapRenderer:
@@ -1358,7 +1358,7 @@ TilemapRenderer:
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
-  m_SortOrder: 0
+  m_SortOrder: 2
   m_MaskInteraction: 0
 --- !u!1839735485 &8195094279533962924
 Tilemap:
