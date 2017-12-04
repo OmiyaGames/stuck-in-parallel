@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using OmiyaGames;
 
 namespace LudumDare40 {
 	[RequireComponent(typeof(Animator))]
@@ -10,8 +11,9 @@ namespace LudumDare40 {
 
 		[SerializeField]
 		Lantern holdingLantern;
+		[SerializeField]
+		SoundEffect pickUpSound;
 
-		// FIXME: start using these once we know the direction the player is facing
 		[Header("Player")]
 		[SerializeField]
 		PlayerCharacter player;
@@ -46,6 +48,9 @@ namespace LudumDare40 {
 
 					// Attach the lantern to the inventory
 					holdingLantern = lantern;
+
+					// Play the sound effect
+					pickUpSound.Play ();
 				}
 			} else if (CrossPlatformInputManager.GetButtonUp ("Fire1") == true) {
 				// Figure out the location to drop the lantern

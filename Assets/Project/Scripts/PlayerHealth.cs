@@ -24,6 +24,8 @@ namespace LudumDare40 {
 		float knockbackStrength = 100f;
 		[SerializeField]
 		float knockbackDurationSeconds = 0.4f;
+		[SerializeField]
+		SoundEffect knockbackSound = null;
 
 		[Header("Animations")]
 		[SerializeField]
@@ -122,6 +124,7 @@ namespace LudumDare40 {
 			if ((info.contacts != null) && (info.contacts.Length > 0)) {
 				body.velocity = info.contacts [0].normal * knockbackStrength;
 				controls.IsInControl = false;
+				knockbackSound.Play ();
 			}
 		}
 	}

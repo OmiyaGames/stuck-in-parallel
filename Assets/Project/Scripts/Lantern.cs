@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using OmiyaGames;
 
 namespace LudumDare40 {
 	public enum Universe {
@@ -22,6 +23,8 @@ namespace LudumDare40 {
 		Rigidbody2D body;
 		[SerializeField]
 		Universe universe;
+		[SerializeField]
+		SoundEffect dropSound;
 
 		[Header("animations")]
 		[SerializeField]
@@ -61,6 +64,7 @@ namespace LudumDare40 {
 						body.bodyType = RigidbodyType2D.Static;
 					} else {
 						body.bodyType = RigidbodyType2D.Dynamic;
+						dropSound.Play ();
 					}
 					animator.SetBool (inInventoryField, inInventory);
 				}
