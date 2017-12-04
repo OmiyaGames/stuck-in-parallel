@@ -88,7 +88,7 @@ namespace LudumDare40 {
 			ray.direction = diff;
 
 			// Raycast for any 3D colliders
-			int numHits = Physics.RaycastNonAlloc (ray, info, diff.magnitude, layers.value, QueryTriggerInteraction.Collide);
+			int numHits = Physics.RaycastNonAlloc (ray, info, diff.sqrMagnitude, layers.value, QueryTriggerInteraction.Collide);
 
 			// Discover the highest priority layer the player should be in
 			Universe currentUniverse = defaultUniverse;
@@ -101,10 +101,10 @@ namespace LudumDare40 {
 				}
 			}
 
+			// Update the player collider's layer
+			updateObject.layer = allPlayerLayers [currentUniverse];
 			// Check if this is different from the last universe
 			if (lastUniverse != currentUniverse) {
-				// Update the player collider's layer
-				updateObject.layer = allPlayerLayers [currentUniverse];
 
 				// Update last universe
 				lastUniverse = currentUniverse;
