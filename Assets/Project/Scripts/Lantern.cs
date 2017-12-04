@@ -27,7 +27,6 @@ namespace LudumDare40 {
 		[SerializeField]
 		string inInventoryField = "IsInInventory";
 
-		public Universe lastUnivese;
 		bool inInventory = false;
 		Animator animator;
 
@@ -70,8 +69,6 @@ namespace LudumDare40 {
 
 		// Use this for initialization
 		void Start () {
-			PlayerCollider.AddLantern (this);
-			lastUnivese = universe;
 			animator = GetComponent<Animator> ();
 		}
 	}
