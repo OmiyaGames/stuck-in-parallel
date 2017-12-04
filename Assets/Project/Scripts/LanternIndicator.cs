@@ -12,6 +12,10 @@ namespace LudumDare40 {
 		Lantern focus = null;
 		[SerializeField]
 		float smooth = 8;
+		[SerializeField]
+		string visibleField = "IsVisible";
+
+		Animator animator;
 
 		public static Lantern Focus {
 			get {
@@ -28,23 +32,18 @@ namespace LudumDare40 {
 		// Use this for initialization
 		void Awake () {
 			instance = this;
-
-			// FIXME: provide actual animation
-			gameObject.SetActive (false);
+			animator = GetComponent<Animator> ();
+			animator.SetBool(visibleField, false);
 		}
 		
 		void UpdateIndicator (Lantern lastFocus, Lantern newFocus) {
 			if (newFocus != null) {
 				if (lastFocus == null) {
-					// FIXME: provide actual animation
-					gameObject.SetActive (true);
+					animator.SetBool(visibleField, true);
 					transform.position = newFocus.transform.position;
-				} else {
-					// FIXME: play a new animation
 				}
 			} else {
-				// FIXME: provide actual animation
-				gameObject.SetActive(false);
+				animator.SetBool(visibleField, false);
 			}
 		}
 

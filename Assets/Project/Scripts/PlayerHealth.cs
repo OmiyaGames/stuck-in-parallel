@@ -30,6 +30,8 @@ namespace LudumDare40 {
 		string invincibilityField = "IsInvincible";
 		[SerializeField]
 		RectTransform healthBar;
+		[SerializeField]
+		string healthBarVisibleField = "ShowHealthBar";
 
 		Rigidbody2D body;
 		Animator animator;
@@ -60,9 +62,14 @@ namespace LudumDare40 {
 				if ((isDead == false) && (currentHealth == 0)) {
 					exit.RestartLevel();
 				}
+
+				// Update health bar graphics
 				healthBarMax.x = currentHealth;
 				healthBarMax.x /= maxHealth;
 				healthBar.anchorMax = healthBarMax;
+
+				// Animate health bar
+				animator.SetBool (healthBarVisibleField, (currentHealth < maxHealth));
 			}
 		}
 
