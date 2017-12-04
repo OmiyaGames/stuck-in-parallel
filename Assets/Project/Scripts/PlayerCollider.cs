@@ -65,7 +65,14 @@ namespace LudumDare40 {
 				info = new RaycastHit[instance.allLanterns.Count];
 			}
 
-			UpdateLayers (gameObject, collisionLayers, Universe.Default, ref lastUniverse);
+			// Setup player layers
+			Universe defaultUniverse = Universe.Default;
+			if (PlayerInventory.HoldingLantern != null) {
+				defaultUniverse = PlayerInventory.HoldingLantern.Universe;
+			}
+			UpdateLayers (gameObject, collisionLayers, defaultUniverse, ref lastUniverse);
+
+			// Setup lantern layers
 			foreach (Lantern lantern in allLanterns.Values) {
 				if (lantern.Universe != Universe.Orange) {
 					UpdateLayers (lantern.Collider2d.gameObject, allLanternLayers[lantern.Universe], lantern.Universe, ref lantern.lastUnivese);
