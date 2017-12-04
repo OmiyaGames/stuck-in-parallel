@@ -5,10 +5,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 492372}
-  - 114: {fileID: 11491956}
+  - component: {fileID: 492372}
+  - component: {fileID: 11491956}
   m_Layer: 0
   m_Name: Change Background Music
   m_TagString: Untagged
@@ -28,6 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &11491956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d4f439ca9f4440d4a7068642b8952c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 8300000, guid: 82c4fbce6f653414694b131cb271532c, type: 3}
+  backgroundMusic: {fileID: 8300000, guid: 3ba800bf5701549518ec882baef6270b, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
