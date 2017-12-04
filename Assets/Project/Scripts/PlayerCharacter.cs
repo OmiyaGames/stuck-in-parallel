@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using OmiyaGames;
 
 namespace LudumDare40 {
 	[RequireComponent(typeof(Animator))]
@@ -22,6 +23,8 @@ namespace LudumDare40 {
 
 		[SerializeField]
 		float movementSpeed;
+		[SerializeField]
+		SoundEffect footsteps;
 
 		Vector2 controls = Vector2.zero;
 		Vector2 move = Vector2.zero;
@@ -100,6 +103,10 @@ namespace LudumDare40 {
 			if (move.sqrMagnitude > 0.1f) {
 				body.velocity = move;
 			}
+		}
+
+		public void PlayFootSteps() {
+			footsteps.Play ();
 		}
 	}
 }

@@ -19,6 +19,8 @@ namespace LudumDare40 {
 		[SerializeField]
 		[Tooltip("Only show tutorial if holding a specific item.  Default for no check.")]
 		Universe isHolding = Universe.Default;
+		[SerializeField]
+		SoundEffect showTutorial = null;
 
 		Collider2D cacheCollider = null;
 		ulong popUpId = PopUpManager.InvalidId;
@@ -76,6 +78,7 @@ namespace LudumDare40 {
 		void ShowPopUp() {
 			HidePopUp ();
 			popUpId = PopUps.ShowNewDialog (message);
+			showTutorial.Play ();
 			++numTimesEntered;
 		}
 
