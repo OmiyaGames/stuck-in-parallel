@@ -10,6 +10,7 @@ namespace LudumDare40 {
 		Orange
 	}
 
+	[RequireComponent(typeof(Animator))]
 	public class Lantern : MonoBehaviour {
 		[SerializeField]
 		Collider collider3d;
@@ -22,8 +23,13 @@ namespace LudumDare40 {
 		[SerializeField]
 		Universe universe;
 
+		[Header("animations")]
+		[SerializeField]
+		string inInventoryField = "IsInInventory";
+
 		public Universe lastUnivese;
 		bool inInventory = false;
+		Animator animator;
 
 		public Collider Collider3d {
 			get {
@@ -57,6 +63,7 @@ namespace LudumDare40 {
 					} else {
 						body.bodyType = RigidbodyType2D.Dynamic;
 					}
+					animator.SetBool (inInventoryField, inInventory);
 				}
 			}
 		}
@@ -65,6 +72,7 @@ namespace LudumDare40 {
 		void Start () {
 			PlayerCollider.AddLantern (this);
 			lastUnivese = universe;
+			animator = GetComponent<Animator> ();
 		}
 	}
 }
