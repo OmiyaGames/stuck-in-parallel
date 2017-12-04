@@ -32,6 +32,8 @@ namespace LudumDare40 {
 		RectTransform healthBar;
 		[SerializeField]
 		string healthBarVisibleField = "ShowHealthBar";
+		[SerializeField]
+		string damagedField = "Damaged";
 
 		Rigidbody2D body;
 		Animator animator;
@@ -92,6 +94,8 @@ namespace LudumDare40 {
 
 					// Indicate damage time
 					damageStartTime = Time.time;
+					animator.SetTrigger (damagedField);
+					Singleton.Get<TimeManager> ().PauseFor (0.15f);
 				}
 			}
 		}
