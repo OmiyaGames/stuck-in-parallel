@@ -9,6 +9,7 @@ namespace LudumDare40 {
 		Lantern lantern;
 
 		void OnTriggerEnter(Collider other) {
+			Debug.Log (other.name);
 			DynamicCollider collider = DynamicCollider.GetScript (other);
 			if (collider != null) {
 				collider.OnEnterLantern (lantern);
