@@ -15,13 +15,13 @@ namespace LudumDare40 {
 
 		[Header("Player Layers")]
 		[SerializeField]
-		string playerDefaultLayer = "Default";
+		string playerDefaultLayer = "Player Default";
 		[SerializeField]
-		string playerGreenLayer = "Green";
+		string playerGreenLayer = "Player Green";
 		[SerializeField]
-		string playerPurpleTag = "Purple";
+		string playerPurpleTag = "Player Purple";
 		[SerializeField]
-		string playerOrangeTag = "Orange";
+		string playerOrangeTag = "Player Orange";
 
 		Collider2D changeLayer;
 		readonly HashSet<Lantern> enteredZones = new HashSet<Lantern>();
