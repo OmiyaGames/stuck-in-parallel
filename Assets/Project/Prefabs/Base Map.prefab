@@ -38,6 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4417067620451804}
   - component: {fileID: 2569400266961478310}
+  - component: {fileID: 114924733790944934}
   m_Layer: 0
   m_Name: Base Map
   m_TagString: Untagged
@@ -660,6 +661,27 @@ MonoBehaviour:
   tiles:
     withCollision: {fileID: 11400000, guid: 1458bd643867242e59502a2065cd5d69, type: 2}
     noCollision: {fileID: 11400000, guid: ea15f1ffa299e41a98991c8c7267d27c, type: 2}
+--- !u!114 &114924733790944934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1065756391806216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b376586c00f4c84befd13a8aefeed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grid: {fileID: 2569400266961478310}
+  colliders:
+  - {fileID: 2113883504637269720}
+  - {fileID: 2113883505176548930}
+  - {fileID: 2113883504570244206}
+  - {fileID: 2113883506327881162}
+  - {fileID: 2113883506661315814}
+  - {fileID: 2113883505785900122}
+  - {fileID: 2113883504413054008}
+  - {fileID: 2113883504567200164}
 --- !u!19719996 &2113883504413054008
 TilemapCollider2D:
   m_ObjectHideFlags: 1
@@ -668,7 +690,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1758104097443484}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -681,7 +703,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1520977474943876}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -694,7 +716,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1344804970070296}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -707,7 +729,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1814324668211238}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -720,7 +742,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1931983480937750}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -733,7 +755,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1021099336690774}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -746,7 +768,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1303091015769560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -759,7 +781,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1800694689315990}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
