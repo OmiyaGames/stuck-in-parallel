@@ -688,7 +688,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1398363777982992
 GameObject:
   m_ObjectHideFlags: 1
@@ -4830,6 +4830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 375
   footsteps: {fileID: 114657034266145868}
+  isInControl: 0
 --- !u!114 &114354870600696018
 MonoBehaviour:
   m_ObjectHideFlags: 1

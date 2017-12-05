@@ -25,13 +25,14 @@ namespace LudumDare40 {
 		float movementSpeed;
 		[SerializeField]
 		SoundEffect footsteps;
+		[SerializeField]
+		bool isInControl = true;
 
 		Vector2 controls = Vector2.zero;
 		Vector2 move = Vector2.zero;
 		Rigidbody2D body = null;
 		Animator animator = null;
 		Direction facing = Direction.Down;
-		bool isInControl = true;
 
 		public Rigidbody2D Body {
 			get {

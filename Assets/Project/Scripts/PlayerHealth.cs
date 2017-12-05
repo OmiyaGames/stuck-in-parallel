@@ -62,6 +62,9 @@ namespace LudumDare40 {
 				return currentHealth;
 			}
 			set {
+				if (value < currentHealth) {
+					PlayerCamera.PlayDamageAnimation ();
+				}
 				currentHealth = Mathf.Clamp (value, 0, maxHealth);
 				if ((isDead == false) && (currentHealth == 0)) {
 					exit.RestartLevel();
