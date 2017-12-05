@@ -861,6 +861,16 @@ MonoBehaviour:
     cursorMode: 1
     cursorModeWeb: 0
     revertTimeScale: 1
+  - scenePath: Assets/Project/Scenes/Level 4.unity
+    displayName: Level Button
+    cursorMode: 1
+    cursorModeWeb: 0
+    revertTimeScale: 1
+  - scenePath: Assets/Project/Scenes/Level 5.unity
+    displayName: Level Button
+    cursorMode: 1
+    cursorModeWeb: 0
+    revertTimeScale: 1
   defaultLockMode: 1
 --- !u!114 &11428920
 MonoBehaviour:
