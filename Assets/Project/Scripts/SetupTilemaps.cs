@@ -23,7 +23,7 @@ namespace LudumDare40 {
 		TileSet tiles;
 
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			BoundsInt bounds = maps.originalWithCollision.cellBounds;
 			foreach (Vector3Int pos in bounds.allPositionsWithin) {
 				TileBase originalTile = maps.originalWithCollision.GetTile<TileBase> (pos);
