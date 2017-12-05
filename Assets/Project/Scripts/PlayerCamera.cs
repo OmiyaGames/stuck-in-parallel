@@ -31,9 +31,11 @@ namespace LudumDare40 {
 		AheadDirection xDirection = AheadDirection.None;
 		AheadDirection yDirection = AheadDirection.None;
 		Animator animator = null;
+		bool focusOnPlayer = false;
 
 		void Start() {
 			instance = this;
+			focusOnPlayer = false;
 			animator = GetComponent<Animator> ();
 		}
 
@@ -43,6 +45,7 @@ namespace LudumDare40 {
 
 		public static void PlayVictoryAnimation() {
 			instance.animator.SetTrigger (instance.victoryAnimation);
+			instance.focusOnPlayer = true;
 		}
 
 		void CheckXMargin(ref float newXPosition) {
@@ -87,7 +90,17 @@ namespace LudumDare40 {
 		}
 
 		void FixedUpdate() {
-			TrackPlayer ();
+			if (focusOnPlayer == false) {
+				TrackPlayer ();
+			} else {
+				float targetX = Mathf.Lerp(transform.position.x, player.Body.position.x, (smooth.x * Time.deltaTime));
+
+				// ... the target y coordinate should be a Lerp between the camera's current y position and the player's current y position.
+				float targetY = Mathf.Lerp(transform.position.y, player.Body.position.y, (smooth.y * Time.deltaTime));
+
+				// Set the camera's position to the target position with the same z component.
+				transform.position = new Vector3(targetX, targetY, transform.position.z);
+			}
 		}
 
 		void TrackPlayer()
