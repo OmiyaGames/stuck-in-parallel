@@ -609,7 +609,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4992624421237570}
-  - component: {fileID: 81055731931917312}
   m_Layer: 0
   m_Name: Menu Stuff
   m_TagString: Untagged
@@ -3857,13 +3856,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!81 &81055731931917312
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1378261586251948}
-  m_Enabled: 1
 --- !u!81 &81388677178929652
 AudioListener:
   m_ObjectHideFlags: 1
@@ -4603,6 +4595,8 @@ MonoBehaviour:
   lookAhead: {x: 2, y: 1.5}
   smooth: {x: 3, y: 3}
   player: {fileID: 114344765289795320}
+  damageAnimation: PlayDamage
+  victoryAnimation: PlayVictory
 --- !u!114 &114132554182790028
 MonoBehaviour:
   m_ObjectHideFlags: 1

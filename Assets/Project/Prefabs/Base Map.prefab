@@ -668,7 +668,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1758104097443484}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -681,7 +681,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1520977474943876}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -694,7 +694,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1344804970070296}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -707,7 +707,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1814324668211238}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -720,7 +720,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1931983480937750}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -733,7 +733,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1021099336690774}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -746,7 +746,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1303091015769560}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -759,7 +759,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1800694689315990}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 06153cb1e56c3428c904fc30670cdc1a, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
