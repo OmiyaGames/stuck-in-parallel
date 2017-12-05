@@ -212,7 +212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22483454, guid: a2fe3c148d0e2fe488560e18f3efd94e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22483454, guid: a2fe3c148d0e2fe488560e18f3efd94e, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -304,7 +304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22428270, guid: bd0108adb38e4834e805e55c3ea12a87, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22428270, guid: bd0108adb38e4834e805e55c3ea12a87, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -22163,11 +22163,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22485940, guid: bc8fb7091c73f9a4aa84239569fc34c0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 243
+      value: 218
       objectReference: {fileID: 0}
     - target: {fileID: 22485940, guid: bc8fb7091c73f9a4aa84239569fc34c0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 194.5
+      value: 174.5
       objectReference: {fileID: 0}
     - target: {fileID: 22485940, guid: bc8fb7091c73f9a4aa84239569fc34c0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22278,7 +22278,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22498224, guid: 409bd7de3a5b6374f8e82f4dc9494e4b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22498224, guid: 409bd7de3a5b6374f8e82f4dc9494e4b, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -22379,7 +22379,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22486468, guid: 5c48fcaa0038d944f91d06c1f9b98156, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22402130, guid: 5c48fcaa0038d944f91d06c1f9b98156, type: 2}
       propertyPath: m_LocalPosition.x
@@ -22434,7 +22434,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22405340, guid: 7db1b36f0befa224fa9dd8e973d9334a, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22405340, guid: 7db1b36f0befa224fa9dd8e973d9334a, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -22585,13 +22585,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2011246333}
   - {fileID: 1352548028}
   - {fileID: 146942566}
   - {fileID: 1196367809}
   - {fileID: 487547419}
   - {fileID: 578233922}
   - {fileID: 1356835094}
-  - {fileID: 2011246333}
   m_Father: {fileID: 921143553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22637,7 +22637,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22445630, guid: eba9d7ddabff6f54da6f78c8bd197132, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22445630, guid: eba9d7ddabff6f54da6f78c8bd197132, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -22733,11 +22733,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 22440622, guid: 9c21726528fb646faada8f5b717daf17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440622, guid: 9c21726528fb646faada8f5b717daf17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 320.17737
+      value: 320.18347
       objectReference: {fileID: 0}
     - target: {fileID: 22440622, guid: 9c21726528fb646faada8f5b717daf17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22761,7 +22761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22440622, guid: 9c21726528fb646faada8f5b717daf17, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440622, guid: 9c21726528fb646faada8f5b717daf17, type: 2}
       propertyPath: m_AnchoredPosition.x
