@@ -649,7 +649,11 @@ namespace OmiyaGames
             if (enableSpritePacking == true)
             {
                 // Turn on sprite packing on build time
-                EditorSettings.spritePackerMode = SpritePackerMode.BuildTimeOnly;
+				#if UNITY_WEBGL
+				EditorSettings.spritePackerMode = SpritePackerMode.BuildTimeOnly;
+				#else
+				EditorSettings.spritePackerMode = SpritePackerMode.BuildTimeOnlyAtlas;
+				#endif
             }
             else
             {
