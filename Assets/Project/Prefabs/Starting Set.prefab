@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 4950056387249618}
   - component: {fileID: 20914621921475184}
   - component: {fileID: 124791726841023568}
+  - component: {fileID: 114266904894442768}
   m_Layer: 0
   m_Name: UI Camera
   m_TagString: Untagged
@@ -1971,6 +1972,18 @@ MonoBehaviour:
   pitchMutationRange: {x: 0.5, y: 1.5}
   mutateVolume: 0
   volumeMutationRange: {x: 0.5, y: 1}
+--- !u!114 &114266904894442768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1602023853739974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 6b61255a6e4a743a08d56b56c987a199, type: 2}
 --- !u!114 &114386289825357444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2008,7 +2021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e27504d86795a4e9498d20cfe78c07b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 375
+  movementSpeed: 300
   footsteps: {fileID: 114648894987353748}
   isInControl: 1
 --- !u!114 &114469219104792760
