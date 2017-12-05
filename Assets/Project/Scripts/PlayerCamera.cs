@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace LudumDare40 {
+	[RequireComponent(typeof(Animator))]
 	public class PlayerCamera : MonoBehaviour {
 		private enum AheadDirection {
 			None,
 			Positive,
 			Negative
 		}
+
+		static PlayerCamera instance;
 
 		[SerializeField]
 		Vector2 margin = new Vector3(2f, 2f);
@@ -20,16 +23,33 @@ namespace LudumDare40 {
 
 		[SerializeField]
 		PlayerCharacter player; // Reference to the player's transform.
+		[SerializeField]
+		string damageAnimation = "PlayDamage";
+		[SerializeField]
+		string victoryAnimation = "PlayVictory";
 
 		AheadDirection xDirection = AheadDirection.None;
 		AheadDirection yDirection = AheadDirection.None;
+		Animator animator = null;
+
+		void Start() {
+			instance = this;
+			animator = GetComponent<Animator> ();
+		}
+
+		public static void PlayDamageAnimation() {
+			instance.animator.SetTrigger (instance.damageAnimation);
+		}
+
+		public static void PlayVictoryAnimation() {
+			instance.animator.SetTrigger (instance.victoryAnimation);
+		}
 
 		void CheckXMargin(ref float newXPosition) {
 			// Returns true if the distance between the camera and the player in the x axis is greater than the x margin.
 			CalculatePosition (ref newXPosition, ref xDirection,
 				player.Body.velocity.x, player.Body.position.x, transform.position.x, margin.x, lookAhead.x);
 		}
-
 
 		void CheckYMargin(ref float newYPosition) {
 			// Returns true if the distance between the camera and the player in the y axis is greater than the y margin.

@@ -22,6 +22,7 @@ namespace LudumDare40 {
 		// Update is called once per frame
 		void OnTriggerEnter2D (Collider2D other) {
 			if ((other.CompareTag("Player") == true) && (isTransitioning == false)) {
+				PlayerCamera.PlayVictoryAnimation ();
 				Singleton.Get<SceneTransitionManager> ().LoadNextLevel ();
 				controls.IsInControl = false;
 				isTransitioning = true;
